@@ -2,7 +2,7 @@
 
 namespace PortfolioCore.ViewComponents
 {
-    public class _DefaultTestimonialsComponentPartial : ViewComponent
+    public class _DefaultResumeComponentPartial : ViewComponent
     {
         public IViewComponentResult Invoke()
         {
