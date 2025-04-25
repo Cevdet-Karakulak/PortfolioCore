@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PortfolioCore.Context;
 
 namespace PortfolioCore.ViewComponents
@@ -8,8 +9,8 @@ namespace PortfolioCore.ViewComponents
         PortfolioContext context = new PortfolioContext();
         public IViewComponentResult Invoke()
         {
-            var values = context.Portfolios.ToList();
-            return View(values);
+            var portfolios = context.Portfolios.Include(p => p.Category).ToList();
+            return View(portfolios);
         }
     }
 }

@@ -18,6 +18,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseStatusCodePagesWithRedirects("/Error/Error404");
+
 app.UseAuthorization();
 
 app.MapControllerRoute(
