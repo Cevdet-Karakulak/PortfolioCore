@@ -63,7 +63,7 @@ Kullanıcılar, sistemdeki çeşitli istatistikleri (örneğin; toplam yetenek s
 Kullanıcılar, sosyal medya hesaplarını yönetebilir ve güncelleyebilirler.
 ![Image](https://github.com/user-attachments/assets/60a7975e-e4c1-4655-aa45-2f8ea784198b)
 
-###🛣️ UI Paneli Özellikleri
+### 🛣️ UI Paneli Özellikleri
 
 ### 🔖 Öne Çıkanlar Kısmı: 
 Bu kısım, veritabanından dinamik olarak veri çekilerek oluşturulmuştur ve iç içe kullanılan partial yapısı ile dinamik hale getirilmiştir.
@@ -71,7 +71,7 @@ Bu kısım, veritabanından dinamik olarak veri çekilerek oluşturulmuştur ve 
 
 ### 🔖 Hakkımda ve İstatistikler: 
 Tüm bilgiler veritabanından dinamik olarak çekilir ve her yenilemede sistem kullanıcıya rastgele bazı veriler sunar.
-![Image](https://github.com/user-attachments/assets/28ba78eb-0c49-4c8d-8066-fb6c91c8062d)
+![Image](https://github.com/user-attachments/assets/857f42c2-d3d8-4789-9591-29c95f255419)
 ![Image](https://github.com/user-attachments/assets/8e29e948-4223-45f7-9818-83f4d4ff1be8)
 
 ### 🔖 Projelerim: 
@@ -91,7 +91,7 @@ Tüm bu bilgiler, veritabanından çekilerek dinamik hale getirilmiştir.
 
 ### 🔖 Google Harita (Embed Map): 
 İletişim bölümü altına bir harita eklenmiştir.
-![Image](https://github.com/user-attachments/assets/a9727cce-c685-456d-923b-74b3d02201f0)
+![Image](https://github.com/user-attachments/assets/b2c1d38d-1681-4513-93ea-2d34b69f6a79)
 
 ### 🔖 Hata Sayfası: 
 Yanlış URL girildiğinde kullanıcıyı "404 Sayfa Bulunamadı" hatasıyla karşılar.
@@ -100,4 +100,4 @@ Yanlış URL girildiğinde kullanıcıyı "404 Sayfa Bulunamadı" hatasıyla kar
 ### 🚀 Sonuç
 Projem, ASP.NET Core ve Entity Framework kullanarak dinamik bir portfolyo sisteminin nasıl geliştirilebileceğine dair kapsamlı bir örnek sunuyor. Kullanıcıların kolayca yönetebileceği ve erişebileceği bir yapı sunmak için birçok özelliği bir araya getirdim.
 
-###🙏 Değerli bilgileri için Murat Yücedağ hocama çok teşekkür ederim.​
+### 🙏 Değerli bilgileri için Murat Yücedağ hocama çok teşekkür ederim.​
