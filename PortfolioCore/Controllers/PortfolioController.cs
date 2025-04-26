@@ -8,17 +8,17 @@ namespace PortfolioCore.Controllers
 {
     public class PortfolioController : Controller
     {
-        PortfolioContext context=new PortfolioContext();
+        PortfolioContext context = new PortfolioContext();
         public IActionResult PortfolioList()
         {
-            var values=context.Portfolios.Include(x=>x.Category).ToList();
+            var values = context.Portfolios.Include(x => x.Category).ToList();
             return View(values);
         }
         [HttpGet]
         public IActionResult CreatePortfolio()
         {
-            var values=new SelectList(context.Categories.ToList(), "CategoryID", "CategoryName");
-            ViewBag.v=values;
+            var values = new SelectList(context.Categories.ToList(), "CategoryID", "CategoryName");
+            ViewBag.v = values;
             return View();
         }
         [HttpPost]
@@ -28,27 +28,25 @@ namespace PortfolioCore.Controllers
             context.SaveChanges();
             return RedirectToAction("PortfolioList");
         }
-        public IActionResult DeletePortfolio(int id)
-        {
-            var value = context.Portfolios.Find(id);
-            context.Portfolios.Remove(value);
-            context.SaveChanges();
-            return RedirectToAction("PortfolioList");
-        }
         [HttpGet]
         public IActionResult UpdatePortfolio(int id)
         {
-            var values = new SelectList(context.Categories.ToList(), "CategoryID", "CategoryName");
-            ViewBag.v = values;
-            var value = context.Portfolios.Find(id);
-            return View(value);
+            var values = context.Portfolios.Include(x => x.Category).FirstOrDefault(p => p.PortfolioID == id);
+            var values2 = new SelectList(context.Categories.ToList(), "CategoryID", "CategoryName");
+            ViewBag.v = values2;
+            return View(values);
         }
         [HttpPost]
         public IActionResult UpdatePortfolio(Portfolio portfolio)
         {
-            var values = new SelectList(context.Categories.ToList(), "CategoryID", "CategoryName");
-            ViewBag.v = values;
             context.Portfolios.Update(portfolio);
+            context.SaveChanges();
+            return RedirectToAction("PortfolioList");
+        }
+        public IActionResult DeletePortfolio(int id)
+        {
+            var values = context.Portfolios.Find(id);
+            context.Portfolios.Remove(values);
             context.SaveChanges();
             return RedirectToAction("PortfolioList");
         }

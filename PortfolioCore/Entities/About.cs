@@ -5,7 +5,6 @@
         public int AboutId { get; set; }
         public string Title { get; set; }
         public string SubDescription { get; set; }
-        public string Details { get; set; }
         public DateTime Birthday { get; set; }
         public string Website { get; set; }
         public string Phone { get; set; }

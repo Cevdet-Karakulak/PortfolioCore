@@ -6,11 +6,19 @@ namespace PortfolioCore.ViewComponents
 {
     public class _DefaultProjectComponentPartial : ViewComponent
     {
+
         PortfolioContext context = new PortfolioContext();
         public IViewComponentResult Invoke()
         {
-            var portfolios = context.Portfolios.Include(p => p.Category).ToList();
-            return View(portfolios);
+            var values = context.Portfolios.ToList();
+
+            return View(values);
+        }
+        public IViewComponentResult GetProjectWithCategory(int id)
+        {
+            var values = context.Portfolios.Include(p => p.Category).Where(p => p.CategoryID == id).ToList();
+
+            return View(values);
         }
     }
 }
